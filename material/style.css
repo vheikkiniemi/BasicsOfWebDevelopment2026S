@@ -1,0 +1,31 @@
+main > section {
+  padding: 3rem 2rem;
+}
+
+.hero {
+  border-radius: 12px;
+  background: #dcecf8;
+}
+
+.hero h1 {
+  max-width: 650px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+#services,
+#contact {
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  background: white;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: #16324f;
+  color: white;
+  text-decoration: none;
+}
