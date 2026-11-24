@@ -1,0 +1,132 @@
+<!--
+    Centria Edu - Basics of Web Development
+
+    Original author: Ville Heikkiniemi
+    Modified by: Student Name
+    Last modified: 2026-11-24
+
+    Based on the original course template.
+
+    https://vheikkiniemi.github.io/thiscanbedeleted/s9/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ville Heikkiniemi">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Centria Edu | Basics of Web Development</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+
+                    <span class="label">Basics of Web Development</span>
+
+                    <h1>
+                        Learn how the web works.
+                    </h1>
+
+                    <p>
+                        For more information, please contact us using the form below.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="topics" id="contact">
+            <div class="container">
+
+                <h2>Contact Us</h2>
+
+                <form id="entry-form" action="https://httpbin.org/post" method="post">
+                    <p id="form-description">* Required field</p>
+                    <label for="name">Name*:</label>
+                    <input type="text" id="name" name="name" minlength="2" maxlength="80" required>
+
+                    <label for="email">Email*:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telephone">Telephone:</label>
+                    <input type="tel" id="telephone" name="telephone" pattern="[+]?[0-9]{7,15}">
+
+                    <label for="subject">Subject*:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+
+                    <fieldset class="radio-group">
+                        <legend>How would you like to be contacted?*</legend>
+
+                        <label>
+                            <input type="radio" name="contactmethod" value="email" checked required>
+                            Email
+                        </label>
+
+                        <label>
+                            <input type="radio" name="contactmethod" value="phone" required>
+                            Phone
+                        </label>
+                    </fieldset>
+
+                    <label for="message">Message*:</label>
+                    <textarea id="message" name="message" rows="5" required minlength="20" maxlength="1000"></textarea>
+                    <div class="button-row">
+                        <button type="submit">Add row</button>
+                        <button type="button" id="clear-table">Clear Table</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container">
+                <table>
+                    <caption>Added items</caption>
+                    <thead>
+                        <tr>
+                            <!-- Match data-field to the input's name. Reorder headings to reorder columns. -->
+                            <th scope="col" data-field="name">Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-rows"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Centria Edu</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
